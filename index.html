@@ -1,0 +1,32 @@
+<html ng-app="hackathonApp">
+  <head>
+    <title>Mongo hackathon</title>
+    <link href="http://nvd3.org//assets/css/nv.d3.css" rel="stylesheet" />
+    <script src="http://nvd3.org//assets/lib/d3.v3.js"></script>
+    <script src="http://nvd3.org//assets/js/nv.d3.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.js"></script>
+    <script src="http://cmaurer.github.io/angularjs-nvd3-directives/lib/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+    <script src="hackathon.js"></script>
+  </head>
+  <body ng-controller="HackathonCtrl">
+  <div style="margin: auto; width:1250px;">
+	    <nvd3-stacked-area-chart
+        	data="results"
+            id="exampleId"
+            showXAxis="true"
+            showYAxis="true"
+            width="1250"
+            height="800"
+            margin="{left:100,top:20,bottom:20,right:0}"
+            noData="Couldn't fetch the data"
+            interactive="true"
+            tooltips="true"
+            staggerLabels="true"
+            showLegend="true">
+            	<svg></svg>
+        </nvd3-stacked-area-chart>
+    </div>
+
+  </body>
+
+</html
